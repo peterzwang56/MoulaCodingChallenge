@@ -1,5 +1,5 @@
 # Moula Coding Chanllenge
-Welcome to my implement of the Moula Coding Challenge
+Welcome to my implement of the Moula Coding Challenge.
 
 ## Prerequisites
 1. Web server that allow to run .Net core, such as Azure App service
@@ -12,6 +12,7 @@ Functional:
 1. Assumping account information in this implementation is private. Therefore it requires certain level of Authentication and Authorisation (AA).
 2. An user may have 0 to many accounts.
 3. In order to prevent malious enumeration against account ID, wrong conbination of username and account ID will be considered as not found.
+4. This is standalone(microservice) which has it own dedicated data repository(database)
 
 
 ## Overview
@@ -20,7 +21,7 @@ This implementation is consisted by three layers:
 2. Service, which is the layer for business logic
 3. Data, which is the layer for data access from data source, in this implementation is MSSQL.
 
-MSSQL AND EF Core are selected for this implementation for illustration purposes. As Data access is a separate layer, it can be easily refactored to other technology in case of need.
+MSSQL AND EF Core (code first) are selected for this implementation for illustration purposes. As Data access is a separate layer, it can be easily refactored to other technology in case of need.
 
 Also for illustrated reason, by default it will seed following data:
 Account number: 1
@@ -33,21 +34,33 @@ Account number: 3
 UserName: Mikasa
 
 ## API route:
-ACCOUNT api:
-GET {baseurl}/api/v1/account/{accountID} requires JWT token with username
+* ACCOUNT api:
+** GET {baseurl}/api/v1/account/{accountID} requires JWT token with username
 
-Dummy Login api (for illustration purposes):
-POST {baseurl}/api/v1/dummylogin/{username}
-Dummy login api will return a JSON as
+* Dummy Login api (for illustration purposes):
+**POST {baseurl}/api/v1/dummylogin/{username}
+**Dummy login api will return a JSON:
+```
 {
-"accessToken":"{access token}"
+	"accessToken":"{access token}"
 }
+```
 
 User need to use the {access token} as auth header to request Account API.
 
 ## Deployment
+Connection string is in AppSettings.json. By default it use local sqlexpress with integrated security.
 
-Deployment can be done
+With Azure DevOps agents: With this project it has an YMAL file created for Azure DevOps with managed agent.
+
+With Powershell Script: 
+```
+    > cd MoulaCodingChallenge\MoulaCodingChallenge
+    > dotnet restore
+    > dotnet build --configuration release
+    > dotnet run --launch-profile prod
+```
+
 
 
 
