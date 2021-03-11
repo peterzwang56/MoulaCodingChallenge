@@ -34,6 +34,8 @@ Account number: 3
 UserName: Mikasa
 
 ## API route:
+*Swagger UT can be found in following location:
+**GET {baseurl/swagger
 * ACCOUNT api:
 ** GET {baseurl}/api/v1/account/{accountID} requires JWT token with username
 
