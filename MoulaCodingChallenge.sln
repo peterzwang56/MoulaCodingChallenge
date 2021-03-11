@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoulaCodingChallenge", "MoulaCodingChallenge\MoulaCodingChallenge.csproj", "{08077E99-D9FA-472B-99EE-56A1A3A7FCD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoulaCodingChallenge.Test", "MoulaCodingChallenge.Test\MoulaCodingChallenge.Test.csproj", "{DDC11D4C-8991-481C-ABE7-97FB8E977894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08077E99-D9FA-472B-99EE-56A1A3A7FCD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08077E99-D9FA-472B-99EE-56A1A3A7FCD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08077E99-D9FA-472B-99EE-56A1A3A7FCD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08077E99-D9FA-472B-99EE-56A1A3A7FCD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDC11D4C-8991-481C-ABE7-97FB8E977894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDC11D4C-8991-481C-ABE7-97FB8E977894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDC11D4C-8991-481C-ABE7-97FB8E977894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDC11D4C-8991-481C-ABE7-97FB8E977894}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {758281E6-B895-4CC4-8F49-4E0FAB5CC306}
+	EndGlobalSection
+EndGlobal
