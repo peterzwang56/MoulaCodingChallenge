@@ -38,8 +38,16 @@ GET {baseurl}/api/v1/account/{accountID} requires JWT token with username
 
 Dummy Login api (for illustration purposes):
 POST {baseurl}/api/v1/dummylogin/{username}
+Dummy login api will return a JSON as
+{
+"accessToken":"{access token}"
+}
+
+User need to use the {access token} as auth header to request Account API.
 
 ## Deployment
+
+Deployment can be done
 
 
 
