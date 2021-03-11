@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -15,10 +16,11 @@ namespace MoulaCodingChallenge.Controllers
     [ApiController]
     [Produces("application/json")]
     [Route("api/v1/dummyAuth")]
-    public class DummyLoginController : ControllerBase
+	[ExcludeFromCodeCoverage]
+	public class DummyLoginController : ControllerBase
     {
 		[HttpPost]
-        [Route("{username}")]
+        [Route("{userName}")]
         public async Task<IActionResult> Login([FromRoute] string userName)
         {
 			var handler = new JsonWebTokenHandler();
