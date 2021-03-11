@@ -16,6 +16,7 @@ using MoulaCodingChallenge.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace MoulaCodingChallenge
 {
@@ -56,13 +57,15 @@ namespace MoulaCodingChallenge
                     Title = "Account API",
                     Description = "Moula Coding Challenge - Account API"
                 });
-                c.AddSecurityDefinition("OpenIdConnect", new OpenApiSecurityScheme
+                c.AddSecurityDefinition("JWT", new OpenApiSecurityScheme
                 {
                     Description = "JWT token using Bearer scheme. Example: \"bearer {token}\"",
                     In = ParameterLocation.Header,
+                    Scheme = "Bearer",
                     Name = "Authorization",
                     Type = SecuritySchemeType.ApiKey
-                });;
+                });
+                c.OperationFilter<AuthRequirementFilter>();
             });
         }
 
@@ -92,4 +95,5 @@ namespace MoulaCodingChallenge
             });
         }
     }
+
 }

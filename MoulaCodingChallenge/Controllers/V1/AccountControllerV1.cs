@@ -26,7 +26,7 @@ namespace MoulaCodingChallenge.Controllers.V1
         /// Return:
         /// 200 - OK with account details
         /// 401 - Unauthorised if request token is not correct
-        /// 404 - Account Not found if username and account number conbination does not return a valid account.
+        /// 404 - Account Not found if username and account number combination does not return a valid account.
         /// </summary>
         /// <param name="AccountNumber"></param>
         /// <returns></returns>
