@@ -24,24 +24,16 @@ This implementation is consisted by three layers:
 MSSQL AND EF Core (code first) are selected for this implementation for illustration purposes. As Data access is a separate layer, it can be easily refactored to other technology in case of need.
 
 Also for illustrated reason, by default it will seed following data:
-Account number: 1
-Username: Eren
-
-Account number: 2
-UserName: Eren
-
-Account number: 3
-UserName: Mikasa
+* Account number: 1	|	Username: Eren
+* Account number: 2	|	UserName: Eren
+* Account number: 3	|	 UserName: Mikasa
 
 ## API route:
-*Swagger UT can be found in following location:
-**GET {baseurl/swagger
-* ACCOUNT api:
-** GET {baseurl}/api/v1/account/{accountID} requires JWT token with username
+* Swagger UT can be found in following location: **GET {baseurl/swagger**
+* ACCOUNT api: **GET {baseurl}/api/v1/account/{accountID}** requires JWT token with username
 
-* Dummy Login api (for illustration purposes):
-**POST {baseurl}/api/v1/dummylogin/{username}
-**Dummy login api will return a JSON:
+* Dummy Login api (for illustration purposes) **POST {baseurl}/api/v1/dummylogin/{username}**
+* Dummy login api will return a JSON:
 ```
 {
 	"accessToken":"{access token}"
